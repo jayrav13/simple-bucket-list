@@ -107,7 +107,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if(editingStyle == UITableViewCellEditingStyle.Delete) {
             self.archived.addData(self.model.getData()[indexPath.row])
             self.model.deleteData(indexPath.row)
-            print(self.archived.getData())
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         }
     }
